@@ -54,10 +54,10 @@ namespace ManipulatingFiles
                     string[] arrayContent = { "Vinicius", "Schnoor", "F", "Santos"};
                     File.WriteAllLines(path2, arrayContent);
                 }
-                string readFile = File.ReadAllText(path2); // Reading file
+                string readFile = File.ReadAllText(path2); // Reading file as string
                 Console.WriteLine(readFile);
 
-                string[] allContent = File.ReadAllLines(path2);
+                string[] allContent = File.ReadAllLines(path2); // Reading file as array line per line
                 foreach(string line in allContent)
                 {
                     Console.WriteLine(line);
