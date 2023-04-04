@@ -62,6 +62,15 @@ namespace ManipulatingFiles
                 {
                     Console.WriteLine(line);
                 }
+                string newText = "FINISHED";
+                // Adding new lines
+                // Method 01
+                string startedText = File.ReadAllText(path2);
+                string finalText = startedText + newText;
+                File.WriteAllText(path2, finalText);
+
+                // Method 02
+                File.AppendAllText(path2, newText);
             }
             Console.ReadKey(true);
         }
